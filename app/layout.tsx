@@ -19,7 +19,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: 'Consero - Coming Soon',
+  title: 'Portecoeur - Coming Soon',
   description: 'Luxury menswear for the modern gentleman.',
 };
 
