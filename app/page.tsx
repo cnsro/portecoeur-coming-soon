@@ -61,84 +61,85 @@ export default function ComingSoonPage() {
   };
 
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen bg-white text-black p-6 font-sans">
-      <div className="text-center max-w-lg w-full">
+    <main className="flex flex-col min-h-screen bg-white text-black p-6 font-sans">
+      <div className="flex-grow flex items-center justify-center">
+        <div className="text-center max-w-lg w-full">
 
-        <div className="mb-4 flex justify-center">
-          <Image
-            src="/portecoeur-heart.png"
-            alt="Portecoeur Logo"
-            width={300}
-            height={100}
-          />
-        </div>
+          <div className="mb-4 flex justify-center">
+            <Image
+              src="/portecoeur-heart.png"
+              alt="Portecoeur Logo"
+              width={300}
+              height={100}
+            />
+          </div>
 
-        <h2 className="text-[22px] md:text-[26px] font-light tracking-wider uppercase text-gray-700">
-          Coming Soon
-        </h2>
+          <h2 className="text-[22px] md:text-[26px] font-light tracking-wider uppercase text-gray-700">
+            Coming Soon
+          </h2>
 
-        <p className="mt-6 text-base md:text-lg text-gray-600 max-w-md mx-auto">
-          Carry what you love. Elegant leather handbags, crafted to be your most cherished companions. Be the first to know when our first collection arrives.
-        </p>
-        
-        <form onSubmit={handleSubmit} className="mt-8 flex flex-col items-center justify-center gap-4 w-full max-w-sm mx-auto">
-          
-          {/* 2. Add the new First Name input field (required) */}
-          <label htmlFor="firstName" className="sr-only">First Name</label>
-          <input
-            type="text"
-            id="firstName"
-            name="FNAME"
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
-            placeholder="First name"
-            className="bg-transparent border border-gray-400 text-black placeholder-gray-500 text-center text-sm w-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gray-600 transition-all duration-300"
-            required
-            disabled={status === 'loading'}
-          />
-
-          <label htmlFor="email" className="sr-only">Email Address</label>
-          <input
-            type="email"
-            id="email"
-            name="EMAIL"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Email address"
-            className="bg-transparent border border-gray-400 text-black placeholder-gray-500 text-center text-sm w-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gray-600 transition-all duration-300"
-            required
-            disabled={status === 'loading'}
-          />
-
-          <label htmlFor="phone" className="sr-only">Phone Number</label>
-          <input
-            type="tel"
-            id="phone"
-            name="PHONE"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-            placeholder="Phone number (optional)"
-            className="bg-transparent border border-gray-400 text-black placeholder-gray-500 text-center text-sm w-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gray-600 transition-all duration-300"
-            disabled={status === 'loading'}
-          />
-
-          <button
-            type="submit"
-            className="bg-black text-white font-semibold text-sm w-full px-8 py-3 border border-black hover:bg-transparent hover:text-black transition-all duration-300 uppercase tracking-wider disabled:opacity-50"
-            disabled={status === 'loading'}
-          >
-            {status === 'loading' ? 'Submitting...' : 'Notify Me'}
-          </button>
-        </form>
-
-        {message && (
-          <p className={`mt-4 text-sm ${status === 'error' ? 'text-red-600' : 'text-gray-700'}`}>
-            {message}
+          <p className="mt-6 text-base md:text-lg text-gray-600 max-w-md mx-auto">
+            Carry what you love. Elegant leather handbags, crafted to be your most cherished companions. Be the first to know when our first collection arrives.
           </p>
-        )}
-      </div>
+          
+          <form onSubmit={handleSubmit} className="mt-8 flex flex-col items-center justify-center gap-4 w-full max-w-sm mx-auto">
+            
+            {/* 2. Add the new First Name input field (required) */}
+            <label htmlFor="firstName" className="sr-only">First Name</label>
+            <input
+              type="text"
+              id="firstName"
+              name="FNAME"
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+              placeholder="First name"
+              className="bg-transparent border border-gray-400 text-black placeholder-gray-500 text-center text-sm w-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gray-600 transition-all duration-300"
+              required
+              disabled={status === 'loading'}
+            />
 
-      <footer className="pt-16 text-xs text-gray-500">
+            <label htmlFor="email" className="sr-only">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="EMAIL"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Email address"
+              className="bg-transparent border border-gray-400 text-black placeholder-gray-500 text-center text-sm w-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gray-600 transition-all duration-300"
+              required
+              disabled={status === 'loading'}
+            />
+
+            <label htmlFor="phone" className="sr-only">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              name="PHONE"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              placeholder="Phone number (optional)"
+              className="bg-transparent border border-gray-400 text-black placeholder-gray-500 text-center text-sm w-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gray-600 transition-all duration-300"
+              disabled={status === 'loading'}
+            />
+
+            <button
+              type="submit"
+              className="bg-black text-white font-semibold text-sm w-full px-8 py-3 border border-black hover:bg-transparent hover:text-black transition-all duration-300 uppercase tracking-wider disabled:opacity-50"
+              disabled={status === 'loading'}
+            >
+              {status === 'loading' ? 'Submitting...' : 'Notify Me'}
+            </button>
+          </form>
+
+          {message && (
+            <p className={`mt-4 text-sm ${status === 'error' ? 'text-red-600' : 'text-gray-700'}`}>
+              {message}
+            </p>
+          )}
+        </div>
+      </div>
+      <footer className="text-center text-xs text-gray-500 py-4">
         &copy; {new Date().getFullYear()} Portecoeur. All Rights Reserved.
       </footer>
     </main>
