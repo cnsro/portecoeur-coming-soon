@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import jsonp from 'jsonp';
+import Image from 'next/image';
 
 export default function ComingSoonPage() {
   // 1. Add state for the first name
@@ -63,12 +64,14 @@ export default function ComingSoonPage() {
     <main className="flex flex-col items-center justify-center min-h-screen bg-white text-black p-6 font-sans">
       <div className="text-center max-w-lg w-full">
 
-        <h1
-          className="text-5xl md:text-6xl mb-4"
-          style={{ fontFamily: "'Cormorant Garamond', serif" }}
-        >
-          portecoeur
-        </h1>
+        <div className="mb-4 flex justify-center">
+          <Image
+            src="/portecoeur-heart.png"
+            alt="Portecoeur Logo"
+            width={300}
+            height={100}
+          />
+        </div>
 
         <h2 className="text-[22px] md:text-[26px] font-light tracking-wider uppercase text-gray-700">
           Coming Soon
