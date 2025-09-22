@@ -138,7 +138,7 @@ export default function ComingSoonPage() {
         )}
       </div>
 
-      <footer className="absolute bottom-6 text-xs text-gray-500">
+      <footer className="pt-16 text-xs text-gray-500">
         &copy; {new Date().getFullYear()} Portecoeur. All Rights Reserved.
       </footer>
     </main>
