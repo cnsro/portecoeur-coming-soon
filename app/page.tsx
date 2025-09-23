@@ -61,7 +61,7 @@ export default function ComingSoonPage() {
   };
 
   return (
-    <main className="flex flex-col min-h-screen bg-white text-black p-6 font-sans">
+    <main className="flex flex-col min-h-screen bg-background text-foreground p-6 font-sans">
       <div className="flex-grow flex items-center justify-center">
         <div className="text-center max-w-lg w-full">
 
@@ -74,11 +74,11 @@ export default function ComingSoonPage() {
             />
           </div>
 
-          <h2 className="text-[22px] md:text-[26px] font-light tracking-wider uppercase text-gray-700">
+          <h2 className="text-[22px] md:text-[26px] font-light tracking-wider uppercase text-foreground">
             Coming Soon
           </h2>
 
-          <p className="mt-6 text-base md:text-lg text-gray-600 max-w-md mx-auto">
+          <p className="mt-6 text-base md:text-lg text-foreground max-w-md mx-auto">
             Carry what you love. Elegant leather handbags, crafted to be your most cherished companions. Be the first to know when our first collection arrives.
           </p>
           
@@ -93,7 +93,7 @@ export default function ComingSoonPage() {
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
               placeholder="First name"
-              className="bg-transparent border border-gray-400 text-black placeholder-gray-500 text-center text-sm w-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gray-600 transition-all duration-300"
+              className="bg-transparent border border-foreground text-foreground placeholder-foreground text-center text-sm w-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent transition-all duration-300"
               required
               disabled={status === 'loading'}
             />
@@ -106,7 +106,7 @@ export default function ComingSoonPage() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Email address"
-              className="bg-transparent border border-gray-400 text-black placeholder-gray-500 text-center text-sm w-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gray-600 transition-all duration-300"
+              className="bg-transparent border border-foreground text-foreground placeholder-foreground text-center text-sm w-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent transition-all duration-300"
               required
               disabled={status === 'loading'}
             />
@@ -119,13 +119,13 @@ export default function ComingSoonPage() {
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               placeholder="Phone number (optional)"
-              className="bg-transparent border border-gray-400 text-black placeholder-gray-500 text-center text-sm w-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gray-600 transition-all duration-300"
+              className="bg-transparent border border-foreground text-foreground placeholder-foreground text-center text-sm w-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent transition-all duration-300"
               disabled={status === 'loading'}
             />
 
             <button
               type="submit"
-              className="bg-black text-white font-semibold text-sm w-full px-8 py-3 border border-black hover:bg-transparent hover:text-black transition-all duration-300 uppercase tracking-wider disabled:opacity-50"
+              className="bg-accent text-background font-semibold text-sm w-full px-8 py-3 border border-accent hover:bg-transparent hover:text-accent transition-all duration-300 uppercase tracking-wider disabled:opacity-50"
               disabled={status === 'loading'}
             >
               {status === 'loading' ? 'Submitting...' : 'Notify Me'}
@@ -133,13 +133,13 @@ export default function ComingSoonPage() {
           </form>
 
           {message && (
-            <p className={`mt-4 text-sm ${status === 'error' ? 'text-red-600' : 'text-gray-700'}`}>
+            <p className={`mt-4 text-sm ${status === 'error' ? 'text-accent' : 'text-foreground'}`}>
               {message}
             </p>
           )}
         </div>
       </div>
-      <footer className="text-center text-xs text-gray-500 py-4">
+      <footer className="text-center text-xs text-foreground py-4">
         &copy; {new Date().getFullYear()} Portecoeur. All Rights Reserved.
       </footer>
     </main>
