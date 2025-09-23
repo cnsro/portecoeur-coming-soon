@@ -125,7 +125,7 @@ export default function ComingSoonPage() {
 
             <button
               type="submit"
-              className="bg-accent text-background font-semibold text-sm w-full px-8 py-3 border border-accent hover:bg-transparent hover:text-accent transition-all duration-300 uppercase tracking-wider disabled:opacity-50 rounded-md"
+              className="bg-foreground text-background font-semibold text-sm w-full px-8 py-3 border border-foreground hover:bg-transparent hover:text-foreground transition-all duration-300 uppercase tracking-wider disabled:opacity-50 rounded-md"
               disabled={status === 'loading'}
             >
               {status === 'loading' ? 'Submitting...' : 'Notify Me'}
