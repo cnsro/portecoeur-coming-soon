@@ -93,7 +93,7 @@ export default function ComingSoonPage() {
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
               placeholder="First name"
-              className="bg-transparent border border-foreground text-foreground placeholder-foreground text-center text-sm w-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent transition-all duration-300"
+              className="bg-transparent border border-foreground text-foreground placeholder-foreground text-center text-sm w-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent transition-all duration-300 rounded-md"
               required
               disabled={status === 'loading'}
             />
@@ -106,7 +106,7 @@ export default function ComingSoonPage() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Email address"
-              className="bg-transparent border border-foreground text-foreground placeholder-foreground text-center text-sm w-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent transition-all duration-300"
+              className="bg-transparent border border-foreground text-foreground placeholder-foreground text-center text-sm w-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent transition-all duration-300 rounded-md"
               required
               disabled={status === 'loading'}
             />
@@ -119,13 +119,13 @@ export default function ComingSoonPage() {
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               placeholder="Phone number (optional)"
-              className="bg-transparent border border-foreground text-foreground placeholder-foreground text-center text-sm w-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent transition-all duration-300"
+              className="bg-transparent border border-foreground text-foreground placeholder-foreground text-center text-sm w-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent transition-all duration-300 rounded-md"
               disabled={status === 'loading'}
             />
 
             <button
               type="submit"
-              className="bg-accent text-background font-semibold text-sm w-full px-8 py-3 border border-accent hover:bg-transparent hover:text-accent transition-all duration-300 uppercase tracking-wider disabled:opacity-50"
+              className="bg-accent text-background font-semibold text-sm w-full px-8 py-3 border border-accent hover:bg-transparent hover:text-accent transition-all duration-300 uppercase tracking-wider disabled:opacity-50 rounded-md"
               disabled={status === 'loading'}
             >
               {status === 'loading' ? 'Submitting...' : 'Notify Me'}
